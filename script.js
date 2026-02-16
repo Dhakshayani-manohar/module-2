@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     const formup = document.getElementById("Signup");
     const formin = document.querySelector(".sign-in");
-    const passwordInput = document.getElementById("floatinginput-password-1");
+    const passwordInput = document.getElementById("floatinginput-password");
     const togglePassword = document.getElementById("togglePassword");
-   
+
 
 
     if (passwordInput && togglePassword) {
@@ -75,13 +75,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (isValid) {
 
-                localStorage.setItem("userEmail",Email1);
-                localStorage.setItem("userPassword",Pw1);
+                localStorage.setItem("userEmail", Email1);
+                localStorage.setItem("userPassword", Pw1);
                 formup.reset();
-            
+
                 window.location.href = "login.html";
             }
-           
+
         })
     }
 
@@ -90,15 +90,20 @@ document.addEventListener("DOMContentLoaded", () => {
         formin.addEventListener("submit", (e) => {
             e.preventDefault();
 
-              
+
             const email = document.getElementById("floatinginput-email-2").value.trim();
-            const password = document.getElementById("floatinginput-password-1").value.trim();
-             const password1 = document.getElementById("floatinginput-password-2").value.trim();
+
+            const password1 = document.getElementById("floatinginput-password").value.trim();
             const storedEmail = localStorage.getItem("userEmail");
             const storedPassword = localStorage.getItem("userPassword");
-            
 
-            
+
+            if (!email || !password1) {
+                alert("Please fill all fields");
+                return;
+            }
+
+
             if (!storedEmail || !storedPassword) {
                 alert("No account found. Please signup first.");
                 return;
@@ -111,8 +116,8 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 alert("Invalid Credentials");
             }
-             
-            
+
+
         })
     }
 
