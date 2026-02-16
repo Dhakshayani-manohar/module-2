@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                console.log("Login submit triggered");
             const email = document.getElementById("floatinginput-email-2").value.trim();
-            const password = document.getElementById("floatinginput-password-2").value.trim();
+            const password = document.getElementById("floatinginput-password-1").value.trim();
             const storedEmail = localStorage.getItem("userEmail");
             const storedPassword = localStorage.getItem("userPassword");
             
