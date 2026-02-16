@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 alert("Invalid Credentials");
             }
 
-
+              localStorage.clear();
         })
     }
 
