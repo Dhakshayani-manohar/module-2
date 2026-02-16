@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (email === storedEmail && password1 === storedPassword) {
                 alert("Login Successful");
                 formin.reset();
-                window.location.href = "https://dhakshayani-manohar.github.io/api-fetch-assignment/";
+                window.location.href = "https://dhakshayani-manohar.github.io/module-1/";
             } else {
                 alert("Invalid Credentials");
             }
