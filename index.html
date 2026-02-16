@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SignIn and Signup form with validation">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .container {
+            background: linear-gradient(155deg, #1ed494 35%, #97e6c6 55%);
+        }
+
+        .btn {
+            background-color: #1ed494;
+            border: none;
+            
+        }
+
+        input:focus {
+            outline: none;
+            box-shadow: none;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #2b986c;
+            color: azure;
+            border: none;
+        }
+
+        hr {
+            color: #16573d;
+
+        }
+
+        span {
+            color: #3df8ad;
+
+        }
+
+        span {
+            color: red;
+            font-size: medium;
+            
+        }
+
+        
+    </style>
+    <title>SignUp-Form</title>
+</head>
+
+<body class="bg-light">
+    <div class="container shadow-sm vh-100 d-flex align-items-stretch">
+
+        <div class="left-content h-100 text-center w-50 d-flex flex-column justify-content-center">
+            <h2 class="fs-1 text-dark">Welcome!</h2>
+            <span class="fs-3">To our Site</span>
+            <p class="muted mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga expedita ea,
+                repellat, sit similique
+                incidunt, deserunt dignissimos sunt totam magni beatae. Aliquid laborum recusandae quod molestias,
+                ducimus vero excepturi numquam?</p>
+        </div>
+        <div class="vr mx-4 bg-dark align-self-center" style="width:1px;height:400px;"></div>
+        <div class="right-content h-100  w-50 d-flex flex-column justify-content-center">
+            <form  id="Signup" style="margin-top:70px;">
+                <h2 class="fs-1 text-center fw-bold">Get Started</h2>
+                <h4 class="text-center muted">Already have account? <a href="login.html">SignIn</a></h4>
+               
+                <div class="form-floating w-75 mx-auto my-5">
+                    <input class="form-control" type="text" placeholder="username" id="floatinginput-name" autocomplete="username">
+                    <label for="floatinginput-name">Username</label>
+                    <span id="userError"></span>
+                </div>
+                <div class="form-floating w-75 mx-auto my-5">
+                    <input class="form-control" type="email" placeholder="email" id="floatinginput-email-1" autocomplete="email">
+                    <label for="floatinginput-email-1">Email Id</label>
+                    <span id="emailError" ></span>
+                </div>
+
+                <div class="form-floating w-75 mx-auto my-5 position-relative">
+
+                    <input class="form-control pe-5" type="password" placeholder="password"
+                        id="floatinginput-password-1" autocomplete="current-password">
+                    <label for="floatinginput-password-1">Password</label>
+
+                    <i class="icon    bi bi-eye  position-absolute top-50 end-0 translate-middle-y  me-3"
+                        id="togglePassword" style="cursor:pointer;">
+                        
+                </i>
+                       <span id="passwordError"></span>
+                </div>
+                 
+                 <div class="text-center">
+                <button type="submit" class="btn col-6 btn-info ">
+                    SignUp
+                </button>
+                </div>
+                <div class="d-flex align-items-center  my-1 w-50 mx-auto">
+                    <hr class="flex-grow-1 ">
+                    <span class="px-3 text-muted">SignUp with</span>
+                    <hr class="flex-grow-1 ">
+                </div>
+                <div class="d-flex flex-row justify-content-center align-items-center gap-2">
+                    <a href="#"> <img src="images/social.png" alt="" width="30px" height="30px" /></a>
+                    <a href="#"> <img src="images/twitter-logo.png" alt="" width="30px" height="30px" /></a>
+                    <a href="#"> <img src="images/facebook.png" alt="" width="30px" height="30px" /></a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
