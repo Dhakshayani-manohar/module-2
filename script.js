@@ -90,9 +90,10 @@ document.addEventListener("DOMContentLoaded", () => {
         formin.addEventListener("submit", (e) => {
             e.preventDefault();
 
-               console.log("Login submit triggered");
+              
             const email = document.getElementById("floatinginput-email-2").value.trim();
             const password = document.getElementById("floatinginput-password-1").value.trim();
+             const password1 = document.getElementById("floatinginput-password-2").value.trim();
             const storedEmail = localStorage.getItem("userEmail");
             const storedPassword = localStorage.getItem("userPassword");
             
@@ -103,10 +104,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
-            if (email === storedEmail && password === storedPassword) {
+            if (email === storedEmail && password1 === storedPassword) {
                 alert("Login Successful");
                 formin.reset();
-            window.location.href = "https://dhakshayani-manohar.github.io/api-fetch-assignment/";
+                window.location.href = "https://dhakshayani-manohar.github.io/api-fetch-assignment/";
             } else {
                 alert("Invalid Credentials");
             }
